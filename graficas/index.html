@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sistema para Gráficas de Personalizados | NIDAC Tecnologia</title>
+<meta name="description" content="Sistema online para gráficas e lojas de personalizados: pedidos, orçamento com sua logo, preço automático de canecas e camisetas, clientes e contas a receber. Teste 7 dias grátis.">
+<meta name="keywords" content="sistema para gráfica, sistema para personalizados, sistema para sublimação, orçamento de caneca, precificação de personalizados, controle de pedidos gráfica, NIDAC Tecnologia">
+<link rel="canonical" href="https://nidac.com.br/graficas/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sistema para Gráficas de Personalizados | NIDAC Tecnologia">
+<meta property="og:description" content="Pedidos, orçamento com sua logo e preço automático. Teste 7 dias grátis.">
+<meta property="og:url" content="https://nidac.com.br/graficas/">
+<meta property="og:image" content="https://nidac-personalizados.floot.app/_cdn/static/24985e43-4be7-46e9-aaeb-a8cd073c32be.png">
+<meta property="og:locale" content="pt_BR">
+<meta name="theme-color" content="#e6007e">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23e6007e'/%3E%3Ctext x='32' y='44' font-family='Arial' font-weight='900' font-size='34' text-anchor='middle' fill='white'%3EN%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Sistema para Gráficas de Personalizados",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web, Android, iPhone",
+  "url": "https://nidac.com.br/graficas/",
+  "description": "Sistema online para gráficas e lojas de produtos personalizados: pedidos, orçamento com logo, preço automático, clientes e contas a receber.",
+  "offers": [
+    {"@type": "Offer", "price": "34.90", "priceCurrency": "BRL", "name": "Plano mensal"},
+    {"@type": "Offer", "price": "390.00", "priceCurrency": "BRL", "name": "Plano anual"}
+  ],
+  "publisher": {"@type": "Organization", "name": "NIDAC Tecnologia", "email": "contato@nidac.com.br", "telephone": "+55-21-97389-0118", "url": "https://nidac.com.br/"}
+}
+</script>
+<style>
+:root{
+  --magenta:#e6007e; --cyan:#00b4c8; --yellow:#ffcc00; --orange:#ff7a1a; --purple:#6a2bd9;
+  --ink:#24123a; --muted:#6b5a7e; --bg:#fffaf5; --card:#ffffff; --line:#f0e4ee;
+  --radius:22px; --shadow:0 14px 40px -18px rgba(106,43,217,.35);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Nunito Sans",system-ui,sans-serif;font-size:17px;line-height:1.6}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.1;margin:0}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:999px;font-weight:800;text-decoration:none;transition:transform .15s, filter .15s;border:0;cursor:pointer;font-size:1rem}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.05)}
+.btn-main{background:var(--magenta);color:#fff;box-shadow:0 10px 24px -10px var(--magenta)}
+.btn-ghost{background:#fff;color:var(--ink);border:2px solid var(--line)}
+.btn-wa{background:#25d366;color:#fff}
+
+/* topo */
+header{position:sticky;top:0;z-index:10;background:rgba(255,250,245,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;font-family:"Bricolage Grotesque";font-weight:800;font-size:1.3rem;text-decoration:none}
+.logo-dots{display:flex;gap:3px}
+.logo-dots i{width:10px;height:10px;border-radius:50%;display:block}
+.nav-links{display:flex;gap:22px;font-weight:700;font-size:.95rem}
+.nav-links a{text-decoration:none;color:var(--muted)}
+.nav-links a:hover{color:var(--magenta)}
+.nav .btn{padding:10px 18px;font-size:.92rem}
+
+/* hero */
+.hero{position:relative;overflow:hidden;color:#fff}
+.hero-bg{position:absolute;inset:0;background:url("https://nidac-personalizados.floot.app/_cdn/static/dcfd364d-cdf2-4f31-a931-354214dcf213.png") center/cover}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,rgba(36,18,58,.95) 0%,rgba(106,43,217,.85) 45%,rgba(230,0,126,.55) 100%)}
+.hero .wrap{position:relative;padding:90px 20px 100px;display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+.tag{display:inline-block;background:var(--yellow);color:var(--ink);font-weight:800;font-size:.85rem;padding:5px 14px;border-radius:999px;margin-bottom:18px}
+.hero h1{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:800}
+.hero h1 span{color:var(--yellow)}
+.hero p.lead{font-size:1.2rem;opacity:.92;margin:20px 0 30px;max-width:560px}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+.hero small{display:block;margin-top:14px;opacity:.8}
+.mock{background:#fff;color:var(--ink);border-radius:var(--radius);padding:22px;box-shadow:0 30px 60px -20px rgba(0,0,0,.5);transform:rotate(1.5deg)}
+.mock-title{font-weight:800;display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.mock-title b{font-size:.75rem;background:var(--yellow);padding:2px 10px;border-radius:999px}
+.mock-row{display:flex;justify-content:space-between;align-items:center;padding:10px 12px;border-radius:12px;margin-bottom:8px;background:#faf6fb;font-size:.95rem}
+.mock-row .dot{width:10px;height:10px;border-radius:50%;display:inline-block;margin-right:8px}
+.mock-total{display:flex;justify-content:space-between;font-family:"Bricolage Grotesque";font-weight:800;font-size:1.4rem;border-top:2px dashed var(--line);padding-top:12px;margin-top:6px}
+.mock-total span:last-child{color:var(--magenta)}
+.mock-pay{display:flex;gap:8px;margin-top:12px;font-size:.82rem;font-weight:800}
+.mock-pay div{flex:1;text-align:center;border-radius:10px;padding:8px}
+
+/* seções */
+section{padding:84px 0}
+.sec-head{text-align:center;max-width:680px;margin:0 auto 46px}
+.sec-head h2{font-size:clamp(1.8rem,3.6vw,2.6rem);font-weight:800}
+.sec-head p{color:var(--muted);margin-top:12px}
+.kicker{font-weight:800;color:var(--magenta);text-transform:uppercase;letter-spacing:.08em;font-size:.8rem;margin-bottom:10px}
+
+.pains{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.pain{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;font-weight:700}
+.pain em{font-style:normal;font-size:1.6rem;display:block;margin-bottom:6px}
+
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.feat{background:var(--card);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow);border-top:6px solid var(--c)}
+.feat .ic{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:color-mix(in srgb,var(--c) 15%,#fff);margin-bottom:14px}
+.feat .ic svg{width:26px;height:26px;stroke:var(--c)}
+.feat h3{font-size:1.25rem;margin-bottom:8px}
+.feat p{margin:0;color:var(--muted);font-size:.98rem}
+
+.band{background:url("https://nidac-personalizados.floot.app/_cdn/static/24985e43-4be7-46e9-aaeb-a8cd073c32be.png") center/cover;position:relative;color:#fff}
+.band::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(230,0,126,.92),rgba(106,43,217,.85))}
+.band .wrap{position:relative}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.step{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:var(--radius);padding:26px}
+.step b{font-family:"Bricolage Grotesque";font-size:2.6rem;color:var(--yellow);line-height:1}
+.step h3{margin:10px 0 6px;font-size:1.25rem}
+.step p{margin:0;opacity:.9}
+.band .sec-head p{color:#fff;opacity:.85}
+.band .kicker{color:var(--yellow)}
+
+.prices{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:780px;margin:0 auto}
+.price{background:#fff;border-radius:var(--radius);padding:32px;border:3px solid var(--line);position:relative;text-align:center}
+.price.best{border-color:var(--magenta);box-shadow:var(--shadow)}
+.price .badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--magenta);color:#fff;font-weight:800;font-size:.8rem;padding:4px 14px;border-radius:999px;white-space:nowrap}
+.price h3{font-size:1.1rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.price .val{font-family:"Bricolage Grotesque";font-weight:800;font-size:3rem;color:var(--purple);margin:10px 0 2px}
+.price .val small{font-size:1.1rem;color:var(--muted)}
+.price .sub{color:var(--muted);font-size:.95rem;min-height:1.6em}
+.price ul{list-style:none;padding:0;margin:20px 0 24px;text-align:left}
+.price li{padding:6px 0 6px 30px;position:relative}
+.price li::before{content:"✓";position:absolute;left:0;top:5px;width:22px;height:22px;border-radius:50%;background:var(--cyan);color:#fff;font-weight:900;font-size:.8rem;display:grid;place-items:center}
+.price .btn{width:100%;justify-content:center}
+.note{text-align:center;color:var(--muted);margin-top:22px;font-size:.95rem}
+
+.custom{background:linear-gradient(135deg,#fff2d6,#ffe1f0);border-radius:var(--radius);padding:40px;display:flex;gap:30px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.custom h2{font-size:1.9rem}
+.custom p{color:var(--muted);margin:10px 0 0;max-width:620px}
+
+.faq{max-width:780px;margin:0 auto}
+details{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 22px;margin-bottom:12px}
+summary{font-weight:800;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::after{content:"+";color:var(--magenta);font-size:1.4rem;line-height:1}
+details[open] summary::after{content:"–"}
+details p{margin:12px 0 0;color:var(--muted)}
+
+.final{text-align:center;background:var(--ink);color:#fff;border-radius:var(--radius);padding:56px 24px}
+.final h2{font-size:clamp(1.8rem,3.6vw,2.5rem)}
+.final p{opacity:.8;margin:14px 0 28px}
+.final .hero-ctas{justify-content:center}
+
+footer{padding:40px 0;color:var(--muted);font-size:.92rem;border-top:1px solid var(--line);margin-top:84px}
+.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.foot a{text-decoration:none;font-weight:700}
+.foot a:hover{color:var(--magenta)}
+.wa-float{position:fixed;right:18px;bottom:18px;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 24px -6px rgba(0,0,0,.35);z-index:20}
+.wa-float svg{width:30px;height:30px;fill:#fff}
+
+@media (max-width:900px){
+  .hero .wrap{grid-template-columns:1fr;padding:60px 20px 70px}
+  .mock{transform:none}
+  .pains{grid-template-columns:1fr 1fr}
+  .features,.steps{grid-template-columns:1fr}
+  .prices{grid-template-columns:1fr;gap:30px}
+  .nav-links{display:none}
+  section{padding:60px 0}
+}
+@media (max-width:480px){
+  .pains{grid-template-columns:1fr}
+  .nav .btn{padding:9px 14px;font-size:.85rem}
+  .custom{padding:28px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="/" class="logo" aria-label="NIDAC Tecnologia">
+      <span class="logo-dots"><i style="background:var(--cyan)"></i><i style="background:var(--magenta)"></i><i style="background:var(--yellow)"></i></span>
+      NIDAC
+    </a>
+    <nav class="nav-links">
+      <a href="#recursos">Recursos</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#precos">Preços</a>
+      <a href="#duvidas">Dúvidas</a>
+    </nav>
+    <a class="btn btn-main" href="https://nidac-personalizados.floot.app/login">Entrar / Testar</a>
+  </div>
+</header>
+
+<main>
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="wrap">
+    <div>
+      <span class="tag">Para gráficas e lojas de personalizados</span>
+      <h1>Sua gráfica organizada, <span>do orçamento à entrega.</span></h1>
+      <p class="lead">Canecas, camisetas, azulejos e papelaria: o sistema calcula o preço sozinho, monta o orçamento com a sua logo e mostra quanto você tem a receber.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-main" href="https://nidac-personalizados.floot.app/login">Testar 7 dias grátis</a>
+        <a class="btn btn-ghost" href="#como-funciona">Ver como funciona</a>
+      </div>
+      <small>Sem cartão para testar · Funciona no celular e no computador</small>
+    </div>
+    <div class="mock" aria-hidden="true">
+      <div class="mock-title">Orçamento #128 — Ana Paula <b>Aprovação de arte</b></div>
+      <div class="mock-row"><span><i class="dot" style="background:var(--magenta)"></i>50 Canecas brancas</span><strong>R$ 1.012,50</strong></div>
+      <div class="mock-row"><span><i class="dot" style="background:var(--cyan)"></i>20 Camisetas DTF</span><strong>R$ 760,00</strong></div>
+      <div class="mock-row"><span><i class="dot" style="background:var(--purple)"></i>10 Azulejos 15×15</span><strong>R$ 250,00</strong></div>
+      <div class="mock-total"><span>Total</span><span>R$ 2.022,50</span></div>
+      <div class="mock-pay">
+        <div style="background:#e0f8fb;color:#007d8c">Sinal pago<br>R$ 1.000,00</div>
+        <div style="background:#fff3d0;color:#8a6200">A receber<br>R$ 1.022,50</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Isso acontece com você?</div>
+      <h2>Chega de caderno, planilha e conversa perdida no WhatsApp</h2>
+    </div>
+    <div class="pains">
+      <div class="pain"><em>🤔</em>Não sabe se o preço da caneca está dando lucro</div>
+      <div class="pain"><em>📒</em>Pedidos anotados em caderno e esquecidos</div>
+      <div class="pain"><em>💸</em>Não lembra quem pagou o sinal e quem ainda deve</div>
+      <div class="pain"><em>⏰</em>Perde tempo montando orçamento no Word</div>
+    </div>
+  </div>
+</section>
+
+<section id="recursos" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Recursos</div>
+      <h2>Tudo que uma gráfica de personalizados precisa</h2>
+      <p>Feito por quem tem estamparia e sabe como é o dia a dia.</p>
+    </div>
+    <div class="features">
+      <div class="feat" style="--c:var(--magenta)">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M8 10h8M8 14h3M14 14h2M8 18h3M14 18h2"/></svg></div>
+        <h3>Preço automático</h3>
+        <p>Cadastre o custo e a margem de cada produto. O sistema calcula o preço e dá desconto por quantidade sozinho.</p>
+      </div>
+      <div class="feat" style="--c:var(--cyan)">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg></div>
+        <h3>Orçamento com sua logo</h3>
+        <p>Orçamento bonito, pronto para imprimir ou mandar pelo WhatsApp, com a logo e os dados da sua gráfica.</p>
+      </div>
+      <div class="feat" style="--c:var(--orange)">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg></div>
+        <h3>Pedidos por etapa</h3>
+        <p>Orçamento, aprovação de arte, produção, pronto e entregue. Veja o que está atrasado e o que vence hoje.</p>
+      </div>
+      <div class="feat" style="--c:var(--purple)">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/><path d="M6 12h.01M18 12h.01"/></svg></div>
+        <h3>Sinal e “A receber”</h3>
+        <p>Registre o sinal e os pagamentos (Pix, dinheiro, cartão). O sistema mostra quanto cada cliente ainda deve.</p>
+      </div>
+      <div class="feat" style="--c:#e0a800">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3>Cadastro de clientes</h3>
+        <p>Histórico de pedidos de cada cliente, telefone e anotações. Fica fácil chamar quem já comprou.</p>
+      </div>
+      <div class="feat" style="--c:#1fa34a">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 6-6"/></svg></div>
+        <h3>Painel de vendas</h3>
+        <p>Quanto vendeu no mês, quais produtos mais saem e quanto entrou no caixa, tudo em gráficos coloridos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="como-funciona" class="band">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Como funciona</div>
+      <h2>Comece em 3 passos</h2>
+      <p>Não precisa instalar nada. Funciona no navegador do celular ou do computador.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><b>1</b><h3>Crie sua conta</h3><p>Cadastre o nome da sua gráfica e ganhe 7 dias grátis para testar tudo.</p></div>
+      <div class="step"><b>2</b><h3>Coloque sua logo e produtos</h3><p>O sistema já vem com canecas, camisetas, azulejos e papelaria. É só ajustar custo e margem.</p></div>
+      <div class="step"><b>3</b><h3>Faça o primeiro orçamento</h3><p>Escolha o cliente, os produtos e a quantidade. O preço sai na hora, pronto para enviar.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="precos">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Preços</div>
+      <h2>Menos que um pacote de canecas por mês</h2>
+      <p>Todos os recursos em qualquer plano. Pague com Pix ou cartão e a liberação é automática.</p>
+    </div>
+    <div class="prices">
+      <div class="price">
+        <h3>Plano mensal</h3>
+        <div class="val">R$ 34,90<small>/mês</small></div>
+        <div class="sub">Sem fidelidade</div>
+        <ul>
+          <li>Pedidos e orçamentos ilimitados</li>
+          <li>Orçamento com sua logo</li>
+          <li>Preço automático</li>
+          <li>Clientes e contas a receber</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://nidac-personalizados.floot.app/login">Testar 7 dias grátis</a>
+      </div>
+      <div class="price best">
+        <span class="badge">Mais vantajoso</span>
+        <h3>Plano anual</h3>
+        <div class="val">R$ 390<small>/ano</small></div>
+        <div class="sub">Equivale a R$ 32,50 por mês · economize R$ 28,80</div>
+        <ul>
+          <li>Tudo do plano mensal</li>
+          <li>Um pagamento só no ano</li>
+          <li>Preço garantido por 12 meses</li>
+          <li>Suporte pelo WhatsApp</li>
+        </ul>
+        <a class="btn btn-main" href="https://nidac-personalizados.floot.app/login">Testar 7 dias grátis</a>
+      </div>
+    </div>
+    <p class="note">Depois do teste, você escolhe o plano dentro do próprio sistema. Seus dados ficam guardados.</p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="custom">
+      <div>
+        <div class="kicker">Sob medida</div>
+        <h2>Precisa de um sistema para outro tipo de negócio?</h2>
+        <p>A NIDAC Tecnologia também desenvolve sistemas de gestão personalizados para pequenas empresas: ordens de serviço, agendamentos, controle de clientes e muito mais.</p>
+      </div>
+      <a class="btn btn-wa" href="https://wa.me/5521973890118?text=Ol%C3%A1!%20Vi%20o%20site%20da%20NIDAC%20e%20quero%20saber%20sobre%20um%20sistema%20sob%20medida." target="_blank" rel="noopener">Falar no WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section id="duvidas" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Dúvidas</div>
+      <h2>Perguntas frequentes</h2>
+    </div>
+    <div class="faq">
+      <details><summary>Preciso instalar alguma coisa?</summary><p>Não. O sistema funciona pela internet, no navegador do celular, tablet ou computador. É só entrar com seu e-mail e senha.</p></details>
+      <details><summary>O teste grátis cobra alguma coisa?</summary><p>Não. Você usa por 7 dias sem pagar nada e sem cadastrar cartão. Se gostar, assina dentro do sistema.</p></details>
+      <details><summary>Como faço o pagamento?</summary><p>Pelo próprio sistema, com Pix ou cartão de crédito (pela InfinitePay). Assim que o pagamento é aprovado, o acesso é liberado automaticamente.</p></details>
+      <details><summary>Posso cadastrar outros produtos além de canecas e camisetas?</summary><p>Sim. Você cadastra quantos produtos quiser: squeeze, chinelo, boné, caderno, adesivos, convites, o que a sua gráfica vender.</p></details>
+      <details><summary>Meus dados ficam seguros?</summary><p>Sim. Cada gráfica só vê os próprios dados, e as informações ficam guardadas mesmo se o plano vencer.</p></details>
+      <details><summary>Posso cancelar quando quiser?</summary><p>Sim. O plano mensal não tem fidelidade: se não renovar, o acesso apenas pausa no fim do período.</p></details>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0;padding-bottom:0">
+  <div class="wrap">
+    <div class="final">
+      <h2>Bora organizar sua gráfica?</h2>
+      <p>Teste grátis por 7 dias. Leva menos de 2 minutos para começar.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-main" href="https://nidac-personalizados.floot.app/login">Criar minha conta grátis</a>
+        <a class="btn btn-wa" href="https://wa.me/5521973890118?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20sistema%20para%20gr%C3%A1ficas%20de%20personalizados." target="_blank" rel="noopener">Tirar dúvidas no WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div><a href="/" style="color:var(--ink)"><strong>NIDAC Tecnologia</strong></a><br>Sistemas de gestão para pequenas empresas · Duque de Caxias – RJ</div>
+    <div>
+      <a href="mailto:contato@nidac.com.br">contato@nidac.com.br</a><br>
+      <a href="https://wa.me/5521973890118" target="_blank" rel="noopener">WhatsApp (21) 97389-0118</a>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5521973890118?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20NIDAC." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.6 2.2 13.8 2.2 12 2.2 6.6 6.6 2.2 12 2.2c2.6 0 5.1 1 6.9 2.9 1.8 1.8 2.9 4.3 2.9 6.9 0 5.4-4.4 9.8-9.8 9.8zm8.3-18.1C18.1 1.5 15.1.2 12 .2 5.5.2.2 5.5.2 12c0 2.1.5 4.1 1.6 5.9L.1 24l6.3-1.7c1.7.9 3.7 1.4 5.6 1.4 6.5 0 11.8-5.3 11.8-11.8 0-3.1-1.2-6.1-3.5-8.2z"/></svg>
+</a>
+
+</body>
+</html>
