@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <pattern id="pole" width="48" height="48" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)">
+      <rect width="48" height="48" fill="#f2eee6"/>
+      <rect width="12" height="48" fill="#b3261e"/>
+      <rect x="24" width="12" height="48" fill="#1f3a8a"/>
+    </pattern>
+    <radialGradient id="glow" cx="50%" cy="42%" r="60%">
+      <stop offset="0" stop-color="#2a2620"/>
+      <stop offset="1" stop-color="#111113"/>
+    </radialGradient>
+  </defs>
+  <rect width="512" height="512" fill="#141416"/>
+  <rect x="0" y="448" width="512" height="64" fill="url(#pole)"/>
+  <rect x="0" y="440" width="512" height="8" fill="#c9a24a"/>
+  <g fill="none" stroke="#c9a24a" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" transform="translate(256 228)">
+    <circle cx="-62" cy="-70" r="42"/>
+    <circle cx="-62" cy="70" r="42"/>
+    <path d="M118 -104 L-30 40"/>
+    <path d="M118 104 L-30 -40"/>
+  </g>
+  <circle cx="256" cy="228" r="9" fill="#e2c27a"/>
+</svg>
